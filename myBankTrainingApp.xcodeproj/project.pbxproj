@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55EFDCF3269DDE04001E45D2 /* myBankTrainingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDCF2269DDE04001E45D2 /* myBankTrainingAppApp.swift */; };
-		55EFDCF5269DDE04001E45D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDCF4269DDE04001E45D2 /* ContentView.swift */; };
+		55EFDCF3269DDE04001E45D2 /* myBankTrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDCF2269DDE04001E45D2 /* myBankTrainingApp.swift */; };
+		55EFDCF5269DDE04001E45D2 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDCF4269DDE04001E45D2 /* TabsView.swift */; };
 		55EFDCF7269DDE06001E45D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EFDCF6269DDE06001E45D2 /* Assets.xcassets */; };
 		55EFDCFA269DDE06001E45D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EFDCF9269DDE06001E45D2 /* Preview Assets.xcassets */; };
 		55EFDD05269DDE06001E45D2 /* myBankTrainingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDD04269DDE06001E45D2 /* myBankTrainingAppTests.swift */; };
 		55EFDD10269DDE06001E45D2 /* myBankTrainingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDD0F269DDE06001E45D2 /* myBankTrainingAppUITests.swift */; };
+		55EFDD1E269DE0D1001E45D2 /* DepositsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDD1D269DE0D1001E45D2 /* DepositsView.swift */; };
+		55EFDD20269DF6B4001E45D2 /* DepositTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDD1F269DF6B4001E45D2 /* DepositTicketView.swift */; };
+		55EFDD22269DFAA0001E45D2 /* DepositsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDD21269DFAA0001E45D2 /* DepositsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +37,8 @@
 
 /* Begin PBXFileReference section */
 		55EFDCEF269DDE04001E45D2 /* myBankTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myBankTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		55EFDCF2269DDE04001E45D2 /* myBankTrainingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myBankTrainingAppApp.swift; sourceTree = "<group>"; };
-		55EFDCF4269DDE04001E45D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		55EFDCF2269DDE04001E45D2 /* myBankTrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myBankTrainingApp.swift; sourceTree = "<group>"; };
+		55EFDCF4269DDE04001E45D2 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		55EFDCF6269DDE06001E45D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55EFDCF9269DDE06001E45D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		55EFDCFB269DDE06001E45D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		55EFDD0B269DDE06001E45D2 /* myBankTrainingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myBankTrainingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EFDD0F269DDE06001E45D2 /* myBankTrainingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myBankTrainingAppUITests.swift; sourceTree = "<group>"; };
 		55EFDD11269DDE06001E45D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55EFDD1D269DE0D1001E45D2 /* DepositsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositsView.swift; sourceTree = "<group>"; };
+		55EFDD1F269DF6B4001E45D2 /* DepositTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositTicketView.swift; sourceTree = "<group>"; };
+		55EFDD21269DFAA0001E45D2 /* DepositsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,11 @@
 		55EFDCF1269DDE04001E45D2 /* myBankTrainingApp */ = {
 			isa = PBXGroup;
 			children = (
-				55EFDCF2269DDE04001E45D2 /* myBankTrainingAppApp.swift */,
-				55EFDCF4269DDE04001E45D2 /* ContentView.swift */,
+				55EFDCF2269DDE04001E45D2 /* myBankTrainingApp.swift */,
+				55EFDCF4269DDE04001E45D2 /* TabsView.swift */,
+				55EFDD1D269DE0D1001E45D2 /* DepositsView.swift */,
+				55EFDD21269DFAA0001E45D2 /* DepositsViewModel.swift */,
+				55EFDD1F269DF6B4001E45D2 /* DepositTicketView.swift */,
 				55EFDCF6269DDE06001E45D2 /* Assets.xcassets */,
 				55EFDCFB269DDE06001E45D2 /* Info.plist */,
 				55EFDCF8269DDE06001E45D2 /* Preview Content */,
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55EFDCF5269DDE04001E45D2 /* ContentView.swift in Sources */,
-				55EFDCF3269DDE04001E45D2 /* myBankTrainingAppApp.swift in Sources */,
+				55EFDCF5269DDE04001E45D2 /* TabsView.swift in Sources */,
+				55EFDD22269DFAA0001E45D2 /* DepositsViewModel.swift in Sources */,
+				55EFDD1E269DE0D1001E45D2 /* DepositsView.swift in Sources */,
+				55EFDD20269DF6B4001E45D2 /* DepositTicketView.swift in Sources */,
+				55EFDCF3269DDE04001E45D2 /* myBankTrainingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +431,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"myBankTrainingApp/Preview Content\"";
-				DEVELOPMENT_TEAM = R638X58M4R;
+				DEVELOPMENT_TEAM = 9UHF7ZF99A;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = myBankTrainingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -441,7 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"myBankTrainingApp/Preview Content\"";
-				DEVELOPMENT_TEAM = R638X58M4R;
+				DEVELOPMENT_TEAM = 9UHF7ZF99A;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = myBankTrainingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
