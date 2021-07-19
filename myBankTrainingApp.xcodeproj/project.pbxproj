@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555AE18926A20E2A003B7468 /* RemoteURLProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AE18626A20DDD003B7468 /* RemoteURLProviding.swift */; };
+		555AE18A26A20E2A003B7468 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AE18526A20DDD003B7468 /* NetworkManager.swift */; };
 		55EFDCF3269DDE04001E45D2 /* myBankTrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDCF2269DDE04001E45D2 /* myBankTrainingApp.swift */; };
 		55EFDCF5269DDE04001E45D2 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFDCF4269DDE04001E45D2 /* TabsView.swift */; };
 		55EFDCF7269DDE06001E45D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EFDCF6269DDE06001E45D2 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		555AE18526A20DDD003B7468 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		555AE18626A20DDD003B7468 /* RemoteURLProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteURLProviding.swift; sourceTree = "<group>"; };
 		55EFDCEF269DDE04001E45D2 /* myBankTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myBankTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EFDCF2269DDE04001E45D2 /* myBankTrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myBankTrainingApp.swift; sourceTree = "<group>"; };
 		55EFDCF4269DDE04001E45D2 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
@@ -78,6 +82,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		555AE18426A20DDD003B7468 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				555AE18526A20DDD003B7468 /* NetworkManager.swift */,
+				555AE18626A20DDD003B7468 /* RemoteURLProviding.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		555AE18726A20DE7003B7468 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				55EFDCF2269DDE04001E45D2 /* myBankTrainingApp.swift */,
+				55EFDCF4269DDE04001E45D2 /* TabsView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		555AE18826A20DF3003B7468 /* Deposits */ = {
+			isa = PBXGroup;
+			children = (
+				55EFDD1D269DE0D1001E45D2 /* DepositsView.swift */,
+				55EFDD21269DFAA0001E45D2 /* DepositsViewModel.swift */,
+				55EFDD1F269DF6B4001E45D2 /* DepositTicketView.swift */,
+			);
+			path = Deposits;
+			sourceTree = "<group>";
+		};
 		55EFDCE6269DDE04001E45D2 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +133,9 @@
 		55EFDCF1269DDE04001E45D2 /* myBankTrainingApp */ = {
 			isa = PBXGroup;
 			children = (
-				55EFDCF2269DDE04001E45D2 /* myBankTrainingApp.swift */,
-				55EFDCF4269DDE04001E45D2 /* TabsView.swift */,
-				55EFDD1D269DE0D1001E45D2 /* DepositsView.swift */,
-				55EFDD21269DFAA0001E45D2 /* DepositsViewModel.swift */,
-				55EFDD1F269DF6B4001E45D2 /* DepositTicketView.swift */,
+				555AE18726A20DE7003B7468 /* App */,
+				555AE18826A20DF3003B7468 /* Deposits */,
+				555AE18426A20DDD003B7468 /* Networking */,
 				55EFDCF6269DDE06001E45D2 /* Assets.xcassets */,
 				55EFDCFB269DDE06001E45D2 /* Info.plist */,
 				55EFDCF8269DDE06001E45D2 /* Preview Content */,
@@ -271,7 +301,9 @@
 				55EFDCF5269DDE04001E45D2 /* TabsView.swift in Sources */,
 				55EFDD22269DFAA0001E45D2 /* DepositsViewModel.swift in Sources */,
 				55EFDD1E269DE0D1001E45D2 /* DepositsView.swift in Sources */,
+				555AE18A26A20E2A003B7468 /* NetworkManager.swift in Sources */,
 				55EFDD20269DF6B4001E45D2 /* DepositTicketView.swift in Sources */,
+				555AE18926A20E2A003B7468 /* RemoteURLProviding.swift in Sources */,
 				55EFDCF3269DDE04001E45D2 /* myBankTrainingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

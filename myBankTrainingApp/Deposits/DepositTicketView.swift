@@ -29,33 +29,13 @@ struct DepositTicket: View {
                 Section {
                     Button("OK") {
                         presentationMode.wrappedValue.dismiss()
-                        vm.deposits.append(DepositItem(amount: Double(amount) ?? 0.0, date: date, description: description))
+                        vm.addDeposit(DepositItem(depositAmount: Double(amount) ?? 0.0, depositDate: date, depositDescription: description))
                     }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                 }
             }
             .navigationBarTitle("Deposit Ticket")
         }
-    }
-}
-
-struct DepositItemView0: View {
-    @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var vm:DepositsViewModel
-    
-    var body: some View {
-        VStack {
-            Spacer()
-            Text("A User Deposit will be added in the amount of $99.99")
-            Spacer()
-            Button("Press to agree") {
-                presentationMode.wrappedValue.dismiss()
-                vm.deposits.append(DepositItem(amount: 99.99, date: Date(), description: "User Deposit"))
-            }
-            Spacer()
-        }
-        .font(.body)
-        .padding()
     }
 }
 

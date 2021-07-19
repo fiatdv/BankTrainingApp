@@ -10,20 +10,20 @@ import SwiftUI
 struct DepositsView: View {
     @StateObject var vm = DepositsViewModel()
     @State private var showDepositCheck = false
-
+    
     var body: some View {
         List {
             Section(header: Text("Deposits")) {
                 ForEach(vm.deposits.sorted(by: { left, right in
-                    left.date > right.date
-                }), id: \.id) { deposit in
+                    left.depositDate > right.depositDate
+                }), id: \.objectId) { deposit in
                     VStack(alignment: .leading, spacing: 10, content: {
-                        Text(deposit.description)
+                        Text(deposit.depositDescription)
                             .font(.subheadline)
                         HStack {
-                            Text(deposit.date, style:.date)
+                            Text(deposit.depositDate, style:.date)
                             Spacer()
-                            Text(String(format: "$%.2f", deposit.amount))
+                            Text(String(format: "$%.2f", deposit.depositAmount))
                         }.font(.callout)
                     })
                 }
@@ -32,7 +32,7 @@ struct DepositsView: View {
                 HStack {
                     Spacer()
                     Text(String(format: "%i transactions for a total of $%.2f",vm.deposits.count, vm.deposits.reduce(0) { result, deposit in
-                            result + deposit.amount
+                            result + deposit.depositAmount
                         }
                     ))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -48,6 +48,9 @@ struct DepositsView: View {
         }
         .sheet(isPresented: $showDepositCheck) {
             DepositTicket(vm: vm)
+        }
+        .onAppear() {
+            vm.fetchDeposits()
         }
     }
 }
