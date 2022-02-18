@@ -21,14 +21,15 @@ struct DepositItem: Decodable, Encodable, RemoteURLProviding {
 
 class DepositsViewModel: ObservableObject  {
     @Published var deposits = [DepositItem]()
+    @Published var showAlert: Bool = false
     private let networkManager = NetworkManager()
     private var cancellable: AnyCancellable?
 
     func fetchDeposits() {
         cancellable = networkManager.download(decodingType: DepositItem.self)
             .sink(receiveCompletion: { result in
-                if case .failure(let error) = result {
-                    print("Download Error \(error)")
+                if case .failure(_) = result {
+                    self.showAlert = true
                 }
             },
             receiveValue: {
@@ -39,8 +40,8 @@ class DepositsViewModel: ObservableObject  {
     func addDeposit(_ deposit: DepositItem) {
         cancellable = networkManager.upload(data: deposit, decodingType: DepositItem.self)
             .sink(receiveCompletion: { result in
-                if case .failure(let error) = result {
-                    print("Upload Error \(error)")
+                if case .failure(_) = result {
+                    self.showAlert = true
                 }
             }, receiveValue: { [weak self] depositItem in
                 self?.deposits.append(depositItem)

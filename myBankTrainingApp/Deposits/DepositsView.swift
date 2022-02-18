@@ -52,6 +52,9 @@ struct DepositsView: View {
         .onAppear() {
             vm.fetchDeposits()
         }
+        .alert(isPresented: $vm.showAlert, content: {
+            Alert(title: Text("Sorry, something went wrong..."), message: Text("The backend system is not currently available"), dismissButton: nil)
+        })
     }
 }
 

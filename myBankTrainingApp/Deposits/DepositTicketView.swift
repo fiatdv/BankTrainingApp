@@ -25,6 +25,25 @@ struct DepositTicket: View {
                     }
                     TextField("Amount", text: $amount)
                     TextField("Description", text: $description)
+                        .lineLimit(2)
+                    Button(action: {
+                        print("")
+                    }, label: {
+                        HStack {
+                            Text("Check Front")
+                            Spacer()
+                            Label("", systemImage: "camera")
+                        }
+                    })
+                    Button(action: {
+                        print("")
+                    }, label: {
+                        HStack {
+                            Text("Check Back")
+                            Spacer()
+                            Label("", systemImage: "camera")
+                        }
+                    })
                 }
                 Section {
                     Button("OK") {
@@ -34,7 +53,7 @@ struct DepositTicket: View {
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                 }
             }
-            .navigationBarTitle("Deposit Ticket")
+            .navigationBarTitle("Add a Deposit")
         }
     }
 }
